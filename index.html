@@ -5,15 +5,35 @@
     <title>SPRINT Community - Welcome</title>
   </head>
   <body>
-    <img alt="Desktop (3)" src="https://user-images.githubusercontent.com/30411401/120313275-6c483100-c2e2-11eb-8a3e-0f58e0983261.png">
+    <body>
+    <div>Sprint Community website will be live in <span id="time">50:00</span> minutes!</div>
+</body>
   </body>
 </html>
 
 
+<script>
+  function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
 
-<style>
-  img {
-    width: 100%;
-  }
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var fiveMinutes = 60 * 5,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+};
   
-</style>
+</script>
