@@ -1,0 +1,66 @@
+
+.fixed-img {
+    width: auto;
+}
+
+a {text-decoration: none!important;}
+
+header {
+    background: url("components/NAV BG.png");
+    background-size: auto;
+    min-height: 90px;
+}
+
+.hero {
+    margin-top: 150px;
+    background: url("components/Hero BG.png");
+    background-size: auto;
+    min-height: 543px;
+}
+
+.hero .w3-row {
+    padding: 66px 56px 76px 111px;
+}
+
+.display-inline {
+    display: inline-block;
+}
+.display-block {
+    display: block;
+}
+
+.sprint101{
+    padding: 45px 176px 10px 176px;
+}
+
+.sprint101bg{
+    background: url("components/spriny101 bg.png");
+}
+
+.sprint102bg{
+    background: url("components/sprint102Back.png");
+}
+.sprint101-btns{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sprint101bg, .sprint102bg {
+    max-width: 575px;
+    max-height: 291px;
+}
+.padding-left{
+    padding-left: 10px;
+}
+.padding-bottom{
+    padding-bottom: 60px;
+}
+
+.padding-left-right{
+    padding-left: 85px;
+    padding-right: 120px;
+}
+
+.aboutMission{
+    background: url("components/Sec4 BG.png");
+}
