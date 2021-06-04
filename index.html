@@ -52,7 +52,7 @@
 
       <section class="outTokens">
         <div class="w3-centered w3-center w3-padding-top-64">
-          <img class="w3-image"src="components/token%20title.png">
+          <img class="w3-image"src="components/token%20title.png" style="min-width:200px!important">
         </div>
         <div class="w3-row w3-padding-large">
           <div class="w3-col w3-half padding-left-right ">
@@ -73,7 +73,7 @@
           <div class="w3-col w3-half padding-left-right ">
             <div class="w3-center padding-left sprint102bg float-left ">
             <div class="display-block sprint101">
-              <img class="w3-image"src="components/sprint102.png">
+              <img class="w3-image"src="components/sprint102.png" style="min-width:200px!important">
             </div>
             <div class="sprint101-btns">
               <a href="https://t.me/s/sprinttokenofficial" target="_blank" class="display-inline w3-margin-right">
@@ -122,9 +122,17 @@
             <img class="w3-image"src="components/presale_btn_red.png">
           </a>
         </div>
-        <div class="w3-centered w3-center w3-padding-top-64">   </div>
+  
       </section>
-
+      <div class="w3-centered w3-center w3-padding-top-64">   </div>
+      <div class="w3-content w3-section">
+        <img class="mySlides" src="slide1.png" style="width:100%">
+        <img class="mySlides" src="slide2.png" style="width:100%">
+        <img class="mySlides" src="slide3.png" style="width:100%">
+        <img class="mySlides" src="slide5.png" style="width:100%">
+        <img class="mySlides" src="slide4.png" style="width:100%">
+      </div>
+      <div class="w3-centered w3-center w3-padding-top-64">   </div>
       <section class="aboutMission padding-bottom">
         <div class="w3-centered w3-center w3-margin-top w3-padding-top-64">
           <img class="w3-image"src="components/about_content.png">
@@ -193,4 +201,21 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
 </script>
+
+
