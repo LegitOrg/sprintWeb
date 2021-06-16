@@ -56,7 +56,7 @@
         </div>
       </section>
 
-      <section class="outTokens">
+      <section class="outTokens" id="ourTokens">
         <div class="w3-centered w3-center w3-padding-top-64">
           <img class="w3-image"src="components/token%20title.png">
         </div>
@@ -67,7 +67,7 @@
                 <img class="w3-image"src="components/sprint101.png" style="min-width:200px!important">
               </div>
               <div class="sprint101-btns">
-                <a href="#AboutSprint101" class="display-inline w3-margin-right">
+                <a href="#ourTokens" onclick="showContractAndChats()" class="display-inline w3-margin-right">
                   <img class="w3-image"src="components/learn%20more.png">
                 </a>
                 <a href="https://dxsale.app/app/pages/defipresale?saleID=3628&chain=BSC" target="_blank" class="display-inline w3-margin-left w3-padding">
@@ -82,15 +82,43 @@
               <img class="w3-image"src="components/sprint102.png" style="min-width:200px!important">
             </div>
             <div class="sprint101-btns">
-              <a href="https://t.me/s/sprinttokenofficial" target="_blank" class="display-inline w3-margin-right">
+              <a href="#ourTokens" onclick="document.getElementById('prevSprintRetroModal').style.display='block'" class="display-inline w3-margin-right">
                 <img class="w3-image"src="components/stay%20updated.png">
               </a>
             </div>
           </div>
           </div>
         </div>
+        <div id="contractAndCharts" class="w3-margin-top" style="text-align: center; display: none; ">
+          <div class="display-inline w3-margin">
+            <div class="sprint101-btns">
+              <a href="https://bscscan.com/address/0xb3bB0EB68F96f8cEB88287E1591FaB150F8AF6Cf" target="_blank" >
+                <img class="w3-image"src="components/sprint_contract.png">
+              </a>
+            </div>
+          </div>
+          <div class="display-inline w3-margin">
+            <div class="sprint101-btns">
+              <a href="https://www.rugscreen.com/scan/certificate?tokenid=173708ec1e" target="_blank" class="display-inline w3-margin-right">
+                <img class="w3-image"src="components/sprint_rugtest.png">
+              </a>
+            </div>
+          </div>
+          <div class="display-inline w3-margin">
+            <div class="sprint101-btns">
+              <a href="https://poocoin.app/tokens/0xb3bb0eb68f96f8ceb88287e1591fab150f8af6cf" target="_blank" class="display-inline w3-margin-right">
+                <img class="w3-image"src="components/sprint_chart.png">
+              </a>
+            </div>
+          </div>
+          <div class="w3-centered w3-center">
+            <a href="#" class="w3-margin w3-padding w3-col">
+              <img class="w3-image w3-margin w3-padding-large" src="components/taxes.png">
+            </a>
+          </div>
+        </div>
         <div class="w3-centered w3-center w3-padding-top-64">
-          <a href="#" class="w3-margin w3-padding w3-col">
+          <a href="#outTokens" class="w3-margin w3-padding w3-col">
             <img class="w3-image" src="components/See%20backlog.png" style="max-width: 500px">
           </a>
         </div>
@@ -120,8 +148,6 @@
         </div>
 
         <div class="w3-centered w3-center w3-padding-top-64">
-          <div id="AboutSprint101" class="w3-padding w3-margin">
-           <a href="https://www.rugscreen.com/scan/certificate?tokenid=173708ec1e" class="w3-margin w3-padding w3-col">Rugscreen Rug Test Passed >></a>
           <br/><br/>
           </div>
           <a href="https://dxsale.app/app/pages/defipresale?saleID=3628&chain=BSC" target="_blank" class="w3-margin w3-padding w3-col">
@@ -131,6 +157,7 @@
   
       </section>
       <div class="w3-centered w3-center w3-padding-top-64">   </div>
+      <a href="https://dxsale.app/app/pages/defipresale?saleID=3628&chain=BSC" target="_blank" class="w3-margin w3-padding w3-col">
       <div class="w3-content w3-section">
         <img class="mySlides" src="slide6.png" style="width:100%">
         <img class="mySlides" src="slide7.png" style="width:100%">
@@ -143,6 +170,7 @@
         <img class="mySlides" src="slide1.png" style="width:100%">
         <img class="mySlides" src="slide10.png" style="width:100%">
       </div>
+      </a>
       <div class="w3-centered w3-center w3-padding-top-64">   </div>
       <section class="aboutMission padding-bottom">
         <div class="w3-centered w3-center w3-margin-top w3-padding-top-64">
@@ -169,6 +197,26 @@
       </section>
     </main>
 
+    <div id="prevSprintRetroModal" class="w3-modal w3-animate-zoom">
+      <div class="w3-modal-content">
+
+        <section class="w3-container sprint-red">
+          <span  onclick="document.getElementById('prevSprintRetroModal').style.display='none'"
+            class="w3-button w3-display-topright sprint-red">&times;</span>
+          <h2>SPRINT101 Retro</h2>
+        </section>
+
+        <div class="w3-container">
+          <p id="prevSprintRetroTextHolder">Some text..</p>
+        </div>
+
+        <footer class="w3-container sprint-red">
+          <p>For questions and more updates, join our telegram community <a href="https://t.me/sprinttokencommunity" target="_blank">https://t.me/sprinttokencommunity</a> </p>
+        </footer>
+
+      </div>
+    </div>
+
   </body>
   <footer class=" w3-padding-top-64">
     <ul class="w3-row-padding  w3-padding-top-64">
@@ -189,6 +237,8 @@
       <br/>
     </div>
   </footer>
+
+
 </html>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-app.js"></script>
@@ -227,6 +277,24 @@ function carousel() {
   x[slideIndex-1].style.display = "block";
   setTimeout(carousel, 7000); // Change image every 2 seconds
 }
+
+function showContractAndChats() {
+  document.querySelector("#contractAndCharts").style.display = 'block';
+}
+
+const prevSprintRetroText = `
+The sprint started with necessary marketing and followed the default sprint timelines as specified on the website. After the marketing round followed the presale process with additional marketing.
+<br>Link to the presale provided: https://dxsale.app/app/pages/defipresale?saleID=2567&chain=BSC.<br>
+At the end of the presale, Less than 6 BNB was raised signaling a failed presale.
+<br>Some of the challenges identified for not meeting the soft or hard cap included low contribution from investors and lack of trust as the Sprint community is still new.
+<br>It was decided to try the following for next sprint:
+<br>- Reduce soft and hard cap
+<br>- Increase marketing and awareness
+<br>- hold AMA outside Sprint community
+
+`;
+
+document.querySelector('#prevSprintRetroTextHolder').innerHTML = prevSprintRetroText;
 </script>
 
 

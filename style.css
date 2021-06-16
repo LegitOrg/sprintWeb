@@ -64,3 +64,8 @@ header {
 .aboutMission{
     background: url("components/Sec4 BG.png");
 }
+
+.sprint-red{
+    background: #880015d4;
+    color: white;
+}
